@@ -196,7 +196,7 @@ void vu_init(void) {
 
 	//reset the adc
 	vu_val = vu_peak = vu_input = 0;		//initialize vu input
-	vu_tab = vu_lin;						//default vu table = log
+	//vu_tab = vu_lin;						//default vu table = log
 	adc_init();								//reset the adc
 	
 	//reset timer1
@@ -210,7 +210,7 @@ uint8_t vu_adc2val(uint8_t adc) {
 	uint8_t i=0;
 	
 	for (i=0; i<24; i++) if (adc < vu_tab[i]) return i;
-	return 23;
+	return 24;
 }
 
 //convert 8-bit val to hold led position
