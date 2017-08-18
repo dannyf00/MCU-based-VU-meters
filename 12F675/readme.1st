@@ -1,0 +1,9 @@
+HD44780-based VU-meter implemented on PIC12F675.
+
+:)
+
+2ch, 14x blocks per channel.
+
+As is, analog input is not turned on but you can comment it in.
+
+Flash is about 80% utilized, and RAM 75% utilized.
