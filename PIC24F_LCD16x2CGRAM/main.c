@@ -69,10 +69,11 @@ void vu_update(char * str, uint8_t val) {
 
 #if 0								//less efficient but more obvious
 	for (i=0; i<val/5; i++) str[2+i]=VU_CHAR; 				//fill up the display buffer
-	//now val is 0..5
+	//now val is 0..4
 	str[2+i]=val % 5;
 #else								//faster but less obvious
-	for (i=0; val >= 5; i+=1) {str[2+i]=VU_CHAR; val-=5;}
+	for (i=0; val >= 5; i+=1, val-=5) str[2+i]=VU_CHAR;
+	//now val is 0..4
 	str[2+i]=val;
 #endif
 }
