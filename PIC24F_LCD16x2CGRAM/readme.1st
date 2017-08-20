@@ -1,2 +1,3 @@
 Using CGRAM to display finer bars - 70 of them all.
 
+Code base identical to the PIC24F non-CGRAM version, with only minor changes to main.c
